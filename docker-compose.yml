@@ -25,7 +25,7 @@ nfsen:
     - 1558/udp:1558/udp
     - 1559/udp:1559/udp
     - 1560/udp:1560/udp
-    - 1561/udp:1561udp
+    - 1561/udp:1561/udp
     - 1562/udp:1562/udp
     - 1563/udp:1563/udp
     - 1564/udp:1564/udp
@@ -37,7 +37,7 @@ nfsen:
     - 1570/udp:1570/udp
     - 1571/udp:1571/udp
     - 1572/udp:1572/udp
-    - 1573/udp:1573udp
+    - 1573/udp:1573/udp
     - 1574/udp:1574/udp
     - 1575/udp:1575/udp
     volumes_from:
