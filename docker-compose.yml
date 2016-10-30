@@ -1,0 +1,44 @@
+nfsenDataContainer:
+  image: debian
+  entrypoint: /bin/bash
+  volumes:
+    - /nfsen/data:/nfsen/data
+  
+
+nfsen:
+    build: .
+    #image: registry.iutbeziers.fr/nfsen-systemd
+    #restart: always
+    hostname: nfsen
+    #privileged: true
+    # Ajouter les ports d'entrée des flux ds sondes
+    ports:
+    - 6080:80
+    # IPFIX
+    - 4739:4379
+    # sFlow
+    - 6343:6343
+    # Netflow 
+    - 1555/udp:1555/udp
+    - 1556/udp:1556/udp
+    - 1557/udp:1557/udp
+    - 1558/udp:1558/udp
+    - 1559/udp:1559/udp
+    - 1560/udp:1560/udp
+    - 1561/udp:1561udp
+    - 1562/udp:1562/udp
+    - 1563/udp:1563/udp
+    - 1564/udp:1564/udp
+    - 1565/udp:1565/udp
+    - 1566/udp:1566/udp
+    - 1567/udp:1567/udp
+    - 1568/udp:1568/udp
+    - 1569/udp:1569/udp
+    - 1570/udp:1570/udp
+    - 1571/udp:1571/udp
+    - 1572/udp:1572/udp
+    - 1573/udp:1573udp
+    - 1574/udp:1574/udp
+    - 1575/udp:1575/udp
+    volumes_from:
+    - nfsenDataContainer
