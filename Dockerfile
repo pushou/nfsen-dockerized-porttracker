@@ -123,7 +123,7 @@ RUN sed  -i "/%sources/a \\    'sflow-global'  => { 'port' => '6343', 'col' => '
 # Bind port 4739 and an entry for IPFIX collection. E.g. NetFlow v10
 RUN sed  -i "/%sources/a \\    'ipfix-global'  => { 'port' => '4739', 'col' => '#0000ff', 'type' => 'netflow' }," nfsen-${NFSEN_VERSION}/etc/nfsen-dist.conf
 # reduce BUFFLEN accelerate graph output - do not use in production 
-RUN sed -i   "/\$BUFFLEN = 200000;/c \$BUFFLEN = 2000;"  nfsen-${NFSEN_VERSION}/etc/nfsen-dist.conf
+# RUN sed -i   "/\$BUFFLEN = 200000;/c \$BUFFLEN = 2000;"  nfsen-${NFSEN_VERSION}/etc/nfsen-dist.conf
 # Add an account for NFSen as a member of the apache group
 RUN useradd -d /data/nfsen -G www-data -m -s /bin/false netflow
 #RUN sed -i 's/$WWWUSER  = "www-data";/$WWWUSER  = "netflow";/g' nfsen-${NFSEN_VERSION}/etc/nfsen-dist.conf
