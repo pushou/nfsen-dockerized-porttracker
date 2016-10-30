@@ -1,6 +1,6 @@
 ### Overview
 
-### Adapetd from https://github.com/nerdalert/nfsen-dockerized for IUT studends
+### Adapted from https://github.com/nerdalert/nfsen-dockerized for IUT studends
 
 **Note:** I did this a long time ago. Pre-fig etc. Needs updating to be useful. It is used to setup nfsen/nfdump that can then be pushed to a global collector.
 
