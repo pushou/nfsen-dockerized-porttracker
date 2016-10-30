@@ -1,10 +1,4 @@
-nfsenDataContainer:
-  image: debian
-  entrypoint: /bin/bash
-  volumes:
-    - /nfsen/data:/nfsen/data
-  
-
+# docker volume create --name nfsenDataVolume
 nfsen:
     build: .
     #image: registry.iutbeziers.fr/nfsen:porttracker
@@ -40,5 +34,5 @@ nfsen:
     - 1573/udp:1573/udp
     - 1574/udp:1574/udp
     - 1575/udp:1575/udp
-    volumes_from:
-    - nfsenDataContainer
+    volumes:
+      - "nfsenDataVolume:/data"
