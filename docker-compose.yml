@@ -7,11 +7,11 @@ nfsenDataContainer:
 
 nfsen:
     build: .
-    #image: registry.iutbeziers.fr/nfsen-systemd
-    #restart: always
+    #image: registry.iutbeziers.fr/nfsen:porttracker
+    restart: always
     hostname: nfsen
     #privileged: true
-    # Ajouter les ports d'entrée des flux ds sondes
+    # Ajoute les ports d'entrée des flux des sondes netflow
     ports:
     - 6080:80
     # IPFIX
