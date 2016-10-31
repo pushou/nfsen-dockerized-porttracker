@@ -94,6 +94,7 @@ RUN cd /usr/local/src && \
         --enable-readpcap \
         --enable-nftrack \
         --enable-nfpcapd \
+        --enable-compat15 \
 	--with-rrdpath=/usr/bin \
 	--enable-sflow && \
 	make && make install
